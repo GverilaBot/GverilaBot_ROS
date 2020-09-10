@@ -2,7 +2,7 @@
 > working prototype.
 Webpage: [https://www.gverilabot.com](https://www.gverilabot.com/)
 
-![](images/GverilaBot_cover.jpg)
+![](docs/GverilaBot_cover.jpg)
 
 ## Status: In development
 Disclaimer: Project is still in development and does not represent final product.
@@ -47,7 +47,7 @@ roslaunch rls_robot_v3_bringup rls_robot_v3_bringup_simulation.launch
 ```
 ### Robot Graphical User Interface
 Control your robot with Block-based GUI
-![](images/BlockBased_GUI.png)
+![](docs/BlockBased_GUI.png)
 Create Folder and clone repository.
 ```
 mkdir -p  ~/GverilaBot_GUI/web_gui
