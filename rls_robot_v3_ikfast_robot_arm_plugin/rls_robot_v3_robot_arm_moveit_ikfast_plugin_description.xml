@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<library path="lib/librls_robot_v3_robot_arm_moveit_ikfast_plugin">
+  <class base_class_type="kinematics::KinematicsBase" name="rls_robot_v3_robot_arm/IKFastKinematicsPlugin" type="rls_robot_v3_robot_arm::IKFastKinematicsPlugin">
+    <description>IKFast61 plugin for closed-form kinematics of rls_robot_v3 robot_arm</description>
+  </class>
+</library>

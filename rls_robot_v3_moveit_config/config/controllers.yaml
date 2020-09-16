@@ -1,0 +1,14 @@
+controller_list:
+  - name: rls_robot_v3
+    action_ns: "follow_joint_trajectory"
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - joint_1
+      - joint_2
+      - joint_3
+      - joint_4
+      
+initial:  # Define initial robot poses.
+  - group: robot_arm
+    pose: home_position

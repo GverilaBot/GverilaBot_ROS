@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: rls_robot_v3_description
+    relative_path: urdf/rls_robot_v3_description.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/rls_robot_v3.srdf
+  CONFIG:
+    author_name: simon
+    author_email: mail@rls.si
+    generated_timestamp: 1597310773
