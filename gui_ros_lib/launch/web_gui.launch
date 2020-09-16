@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+		<arg name="unregister_timeout" value="5.0"/>
+	</include>
+	<node pkg="gui_ros_lib" name="gui_node" type="web_gui_ros_comm.py" output="screen"> 
+	</node>
+</launch>
