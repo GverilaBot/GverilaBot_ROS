@@ -1,0 +1,9 @@
+# Parameters for robot arm
+rviz_simulation: false
+
+# 0 - Voltage 
+# 1 - Current
+# 2 - Velocity
+# 3 - Position (Default)
+# 4 - Trajectory
+controller_type: 3

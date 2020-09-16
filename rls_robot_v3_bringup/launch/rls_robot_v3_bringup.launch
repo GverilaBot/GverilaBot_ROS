@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<launch>
+	
+  <!-- Load robot parameters -->
+  <rosparam file="$(find rls_robot_v3_bringup)/config/robot_parameters.yaml" command="load"/>
+  
+  <!-- specify the planning pipeline -->
+  <arg name="pipeline" default="ompl" />
+
+  <!-- By default, we do not start a database (it can be large) -->
+  <arg name="db" default="false" />
+  <!-- Allow user to specify database location -->
+  <arg name="db_path" default="$(find rls_robot_v3_moveit_config)/default_warehouse_mongo_db" />
+
+  <!-- By default, we are not in debug mode -->
+  <arg name="debug" default="false" />
+  
+  <arg name="use_gui" default="false" />
+  
+  <arg name="rviz_"  default ="false" />
+  
+  <param name="rviz_simulation" value="false"/> 
+  
+  <!-- Load the URDF, SRDF and other .yaml configuration files on the param server -->
+  <include file="$(find rls_robot_v3_moveit_config)/launch/planning_context.launch">
+    <arg name="load_robot_description" value="true"/>
+  </include>
+  
+  <!-- ROS - MoveIt joint_trajectory_interface (Action service)  -->
+ 
+  <node pkg="rls_robot_v3_bringup" name="joint_trajectory_interface" type="rls_robot_v3_action_server.py" output="screen"> 
+  </node>
+  
+  <!--  Add controller  --> 
+  <include file="$(find rls_robot_v3_controller)/launch/controller.launch" />
+  
+  
+  <!-- Moveit move_group -->
+  <include file="$(find rls_robot_v3_moveit_config)/launch/move_group.launch">
+    <arg name="info" value="true"/>
+  </include>
+
+  <!-- robot state publisher listen to /joint_states and publish transform to /tf-->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
+  
+  <!-- We do not have a robot connected, so publish fake joint states -->
+  <!--<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="$(arg use_gui)"/>  
+    <rosparam param="source_list">[simple_robot/fake_controller_joint_states]</rosparam> 
+  </node>
+  -->
+  
+  <!-- Scratch gui and rosbridge -->
+  <include file="$(find gui_ros_lib)/launch/web_gui.launch" />
+  
+  <!-- Run Rviz and load the default config to see the state of the move_group node -->
+  <group if="$(arg rviz_)">
+	<!-- Set global parameter for nodes -->
+	<param name="rviz_vizualization" value="true"/> 
+	<include file="$(find rls_robot_v3_moveit_config)/launch/moveit_rviz.launch">
+      <arg name="rviz_config" value="$(find rls_robot_v3_moveit_config)/launch/moveit.rviz"/>
+      <arg name="debug" value="$(arg debug)"/>
+      
+    </include>
+  </group>
+  
+</launch>

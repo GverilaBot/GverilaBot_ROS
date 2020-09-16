@@ -1,0 +1,18 @@
+#simple_robot:
+# Publish all joint states 
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 30
+    
+# Joint Trajectory Controller - position based 
+# type: position_controllers/JointTrajectoryController
+trajectory_controller:
+  type: position_controllers/JointGroupPositionController
+  joints: 
+      - joint_1  
+      - joint_2
+      - joint_3  
+      - joint_4
+    # No pid values as this controller simply passes the input position to the actuators
+    
+

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<launch>
+	<!-- Load controller parameters -->
+	<rosparam file="$(find rls_robot_v3_controller)/config/robot_controllers.yaml" command="load"/>
+	
+	<!-- Robot driver -->
+    <node name="rls_robot_v3_controller_" pkg="rls_robot_v3_controller" type="rls_robot_v3_controller" output="screen" />
+  
+	<!-- robot state publisher listen to /joint_states and publish transform to /tf-->
+    <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" output="screen" /> -->
+	
+	<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" 
+        args="
+			trajectory_controller 
+			joint_state_controller
+        "/>
+	<!-- /simple_robot/trajectory_controller  -->
+</launch>
