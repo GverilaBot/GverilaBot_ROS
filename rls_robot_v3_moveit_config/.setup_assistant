@@ -7,5 +7,5 @@ moveit_setup_assistant_config:
     relative_path: config/rls_robot_v3.srdf
   CONFIG:
     author_name: simon
-    author_email: mail@rls.si
+    author_email: info@gverilabot.dev
     generated_timestamp: 1597310773

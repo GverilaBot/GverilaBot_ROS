@@ -1,7 +1,7 @@
 /**
  *	\file	rls_robot_v3_controller_node.h
  * 	\brief	Controller driver header file for rls_robot_v3 
- * 	\author	Simon Kajsner
+ * 	\author	
  * 
 */
 #include <hardware_interface/joint_command_interface.h>

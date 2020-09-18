@@ -1,7 +1,7 @@
 /**
  *	\file	simple_robot_hardware_interface.cpp 
  * 	\brief	Hardware interface  file for rls_robot_v3 
- * 	\author	Simon Kajsner
+ * 	\author	
  * 
 */
 #include "rls_robot_v3_controller/rls_robot_v3_hardware_interface.h"

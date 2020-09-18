@@ -1,6 +1,7 @@
 # GverilaBot ROS stack
-> working prototype.
-Webpage: [https://www.gverilabot.com](https://www.gverilabot.com/)
+---
+> Webpage: [https://www.gverilabot.com](https://www.gverilabot.com/)
+> GNU Affero General Public License v3.0 (for more information see [LICENSE](LICENSE) file)
 
 ![](docs/GverilaBot_cover.jpg)
 
@@ -53,7 +54,9 @@ roslaunch rls_robot_v3_bringup rls_robot_v3_bringup_simulation.launch
 ![](docs/rviz_1.png)
 
 ### Robot Graphical User Interface
-Control your robot with Block-based GUI
+---
+Control your robot with [Block-based GUI](https://github.com/SimonKajsner/GverilaBot_GUI)
+
 ![](docs/BlockBased_GUI.png)
 Create Folder and clone repository.
 ```

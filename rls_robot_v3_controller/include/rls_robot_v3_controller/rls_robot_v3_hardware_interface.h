@@ -1,7 +1,7 @@
 /**
  *	\file	rls_robot_v3_hardware_interface.h
  * 	\brief	Hardware interface header file for rls_robot_v3 
- * 	\author	Simon Kajsner
+ * 	\author	
  * 
 */
 

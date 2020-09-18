@@ -9,7 +9,7 @@ from trajectory_msgs.msg import JointTrajectoryPoint
 '''
 	\file		rls_robot_v3_action_server.py
 	\brief 		This module creates action service interface between move_group and controller
-	\author 	Simon Kajsner
+	\author 	
 '''
 
 
