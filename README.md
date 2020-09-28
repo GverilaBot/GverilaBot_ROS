@@ -27,7 +27,7 @@ sudo apt-get install ros-melodic-robot-state-publisher ros-melodic-moveit ros-me
 ```
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
-git clone https://github.com/SimonKajsner/GverilaBot_ROS.git
+git clone https://github.com/GverilaBot/GverilaBot_ROS.git
 ```
 
 4. Build the packages :
