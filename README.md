@@ -55,15 +55,15 @@ roslaunch rls_robot_v3_bringup rls_robot_v3_bringup_simulation.launch
 
 ### Robot Graphical User Interface
 ---
-Control your robot with [Block-based GUI](https://github.com/SimonKajsner/GverilaBot_GUI)
+Control your robot with [Block-based GUI](https://github.com/GverilaBot/GverilaBot_GUI)
 
 ![](docs/BlockBased_GUI.png)
 Create Folder and clone repository.
 ```
 mkdir -p  ~/GverilaBot_GUI/web_gui
 cd ~/GverilaBot_GUI/web_gui
-git clone https://github.com/SimonKajsner/GverilaBot_ROS.git
+git clone https://github.com/GverilaBot/GverilaBot_ROS.git
 ```
-Open [index.html](https://github.com/SimonKajsner/GverilaBot_GUI/blob/master/index.html) with your favourite web browser and start programming. 
+Open [index.html](https://github.com/GverilaBot/GverilaBot_GUI/blob/master/index.html) with your favourite web browser and start programming. 
 
 
