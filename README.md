@@ -62,7 +62,7 @@ Create Folder and clone repository.
 ```
 mkdir -p  ~/GverilaBot_GUI/web_gui
 cd ~/GverilaBot_GUI/web_gui
-git clone https://github.com/GverilaBot/GverilaBot_ROS.git
+git clone --recurse-submodules https://github.com/GverilaBot/GverilaBot_GUI.git
 ```
 Open [index.html](https://github.com/GverilaBot/GverilaBot_GUI/blob/master/index.html) with your favourite web browser and start programming. 
 
